@@ -1,29 +1,28 @@
-const express = require("express");
-const cors = require("cors");
-const dotenv = require("dotenv");
-const path = require("path");
+app.get("/api/videos", async (req, res) => {
+  const client = createClient(
+    "https://isa14.edumake.de/remote.php/dav/files/" + process.env.USERNAME + "/Videos%20Ackerguide/",
+    {
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD,
+    }
+  );
 
-dotenv.config();
-const app = express();
-app.use(cors());
+  try {
+    const folders = ["Raven", "Trimble", "Efix"];
+    const results = {};
 
-const PORT = process.env.PORT || 3000;
+    for (const folder of folders) {
+      const folderPath = `https://isa14.edumake.de/remote.php/dav/files/${process.env.USERNAME}/Videos%20Ackerguide/${folder}/`;
+      const contents = await client.getDirectoryContents(folder);
+      const videoFiles = contents
+        .filter(file => file.mime === "video/mp4")
+        .map(file => folderPath + encodeURIComponent(file.basename));
+      results[folder] = videoFiles;
+    }
 
-// Test-Endpunkt, um zu prüfen, ob API funktioniert
-app.get("/api/videos", (req, res) => {
-  res.json({ status: "OK", message: "Test erfolgreich" });
-});
-
-// Statische Dateien (HTML, CSS, JS) bereitstellen
-app.use(express.static(path.join(__dirname)));
-
-// HTML-Datei beim Aufruf von "/" ausgeben
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "ackerguide_chatbot_local.html"));
-});
-
-// Server starten
-app.listen(PORT, "0.0.0.0", () => {
-  console.log("📦 process.env.PORT:", process.env.PORT);
-  console.log(`✅ API läuft unter http://0.0.0.0:${PORT}/api/videos`);
+    res.json(results);
+  } catch (err) {
+    console.error("Fehler beim Abrufen der Videos:", err.message);
+    res.status(500).json({ error: "Fehler beim Abrufen der Videos." });
+  }
 });
