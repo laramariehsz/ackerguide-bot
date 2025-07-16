@@ -10,6 +10,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
+// 👉 Test-API
 app.get("/api/videos", async (req, res) => {
   const client = createClient(
     `https://isa14.edumake.de/remote.php/dav/files/${process.env.USERNAME}/Videos%20Ackerguide/`,
@@ -34,17 +35,21 @@ app.get("/api/videos", async (req, res) => {
 
     res.json(results);
   } catch (err) {
-    console.error("Fehler beim Abrufen der Videos:", err.message);
+    console.error("❌ Fehler beim Abrufen der Videos:", err.message);
     res.status(500).json({ error: "Fehler beim Abrufen der Videos." });
   }
 });
 
+// 👉 HTML ausliefern
 app.use(express.static(path.join(__dirname)));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "ackerguide_chatbot_local.html"));
+  const htmlPath = path.join(__dirname, "ackerguide_chatbot_local.html");
+  console.log("📄 HTML senden:", htmlPath);
+  res.sendFile(htmlPath);
 });
 
+// 👉 Server starten
 app.listen(PORT, "0.0.0.0", () => {
   console.log("📦 process.env.PORT:", process.env.PORT);
   console.log(`✅ API läuft unter http://0.0.0.0:${PORT}/api/videos`);
