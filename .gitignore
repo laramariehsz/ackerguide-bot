@@ -1,0 +1,13 @@
+# Umgebungsvariablen
+.env
+
+# Abhängigkeiten
+node_modules/
+
+# Editor- und Systemdateien
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
