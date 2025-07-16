@@ -39,7 +39,6 @@ app.get("/api/videos", async (req, res) => {
   }
 });
 
-// Falls du auch die HTML-Datei anzeigen willst
 app.use(express.static(path.join(__dirname)));
 
 app.get("/", (req, res) => {
