@@ -39,6 +39,6 @@ app.get("/api/videos", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ API läuft unter http://localhost:${PORT}/api/videos`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ API läuft unter http://0.0.0.0:${PORT}/api/videos`);
 });
