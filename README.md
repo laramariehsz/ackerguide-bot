@@ -169,33 +169,8 @@ http://localhost:3000/api/videos
 - Deployment auf Railway war fehleranfällig (PORT, HTML-Pfad, .env).
 - Unterschiedliches Verhalten zwischen lokalem Server und Cloud-Dienst.
 
-### 🎯 Was möchten Sie im M2-Softwareprojekt vertiefen?
 
-- Absicherung von APIs (Token, Auth)
-- Professionelles Styling (CSS Frameworks)
-- Backend-Fehlerbehandlung und Logging
 
 ---
 
-## 📋 9. To-Do-Liste
-
-- [x] API mit WebDAV implementiert
-- [x] Chatbot-Logik im Frontend
-- [x] Deployment auf Railway eingerichtet
-- [x] README Dokumentation begonnen
-- [ ] Responsives Design einbauen
-- [ ] Fallback bei Fehlern integrieren
-- [ ] Benutzerführung optimieren
-
 ---
-
-## 🤖 10. Prompts zur Unterstützung
-
-- „Erstelle mir eine Projektdokumentation für eine Node.js App mit Express und WebDAV.“
-- „Wie deploye ich eine statische HTML-Seite mit Express.js auf Railway?“
-- „Wie kann ich Videos aus WebDAV in einer Web-App anzeigen?“
-
----
-
-✅ **Wichtig:**  
-Diese Datei wurde automatisch auf Basis deines Codes, deiner Screenshots und deines Repos erstellt. Bitte entferne Platzhalter oder passe Inhalte ggf. vor Abgabe an.
