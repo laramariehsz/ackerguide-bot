@@ -8,14 +8,45 @@
 <body>
   <div class="chat-container">
     <h1>Ackerguide Video-Chatbot</h1>
-    <div id="chat" class="chat-box">
-      <!-- Chatverlauf wird hier eingefügt -->
+
+    <!-- Tabs -->
+    <div class="tab-header">
+      <button class="tab-button active" data-tab="chat">Chatbot</button>
+      <button class="tab-button" data-tab="faq">FAQs</button>
     </div>
-    <form id="form">
-      <input type="text" id="input" placeholder="Frag z. B.: Trimble Installation" autocomplete="off" />
-      <button type="submit">Senden</button>
-    </form>
+
+    <!-- Chat Tab -->
+    <div id="chat-tab" class="tab-content active">
+      <div id="chat" class="chat-box">
+        <!-- Chatverlauf -->
+      </div>
+      <form id="form" class="input-area">
+        <input type="text" id="input" placeholder="Frag z. B.: Trimble Installation" autocomplete="off" />
+        <button type="submit" id="send-button">Senden</button>
+      </form>
+    </div>
+    <!-- FAQ Tab -->
+    <div id="faq-tab" class="tab-content">
+  <div class="faq-list">
+    <h3>Häufige Fragen</h3>
+
+    <div class="faq-item">
+      <button class="faq-question">Wie installiere ich Trimble?</button>
+      <div class="faq-answer">
+        Die Trimble-Installation erfolgt über die offizielle Setup-Datei und das Ackerguide-Handbuch. 
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Was ist der Ackerguide?</button>
+      <div class="faq-answer">
+        Der Ackerguide ist ein digitales Werkzeug zur Beratung und Schulung im Agrarsektor.
+      </div>
+    </div>
+
   </div>
+</div>
+
   <script src="script.js"></script>
 </body>
 </html>
