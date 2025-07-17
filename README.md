@@ -1,11 +1,4 @@
 
-# 📘 Projektdokumentation (README.md)
-
-Herzlich willkommen zu Ihrer Projektdokumentation!  
-Diese README.md hilft Ihnen dabei, Ihr Projekt **klar, vollständig und verständlich zu dokumentieren**.
-
----
-
 ## 📝 1. Projekttitel
 
 **AckerGuide Bot – Interaktives Video-Lernsystem**
