@@ -15,7 +15,7 @@ Das Ziel ist es, Lerninhalte auf einfache Weise interaktiv und visuell bereitzus
 
 ### 📂 Ordnerstruktur des www-Verzeichnisses
 
-> Hinweis: Hier ein Beispiel, wie die Struktur lokal aussehen kann.
+
 
 ```
 ackerguide-bot1/
