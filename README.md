@@ -134,7 +134,7 @@ http://localhost:3000/api/videos
 ## 💡 6. Nutzung & Bedienung
 
 - Die Startseite zeigt den Chatbot an.
-- User kann Begriffe wie „Efix installieren“ oder „Raven kalibrieren“ eingeben.
+- User kann Begriffe wie „Efix" und "Installation oder „Raven" und "Installation" eingeben.
 - Die Anwendung ruft die passende Video-URL von einem WebDAV-Server ab und zeigt sie im Chat an.
 - Die Datenstruktur wird dynamisch aus `/api/videos` geladen.
 
