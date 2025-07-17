@@ -1,7 +1,7 @@
 
 ## 📝 1. Projekttitel
 
-**AckerGuide Bot – Interaktives Video-Lernsystem**
+**Ackerguide Video Chatbot**
 
 ---
 
