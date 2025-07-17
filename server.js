@@ -5,10 +5,14 @@ const { createClient } = require("webdav");
 const path = require("path");
 
 dotenv.config();
+console.log("🧪 USERNAME:", process.env.USERNAME);
+console.log("🧪 PASSWORD:", process.env.PASSWORD ? "gesetzt" : "NICHT gesetzt");
+
 const app = express();
 app.use(cors());
 
 const PORT = process.env.PORT || 3000;
+
 
 // 👉 Test-API
 app.get("/api/videos", async (req, res) => {
